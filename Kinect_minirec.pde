@@ -84,8 +84,10 @@ void doRecord(boolean _r){
       frameCounter=0;
     } 
     else if (!_r) {
-      for(int j=0;j<depthArray.length;j++){
+      for(int j=0;j<frameCounter;j++){
         for(int i=0;i<sW*sH;i++){
+          //int q = int(float(255) * (float(depthArray[j][i])/float(2047)));
+          //saveImg.pixels[i] = color(q,q,q);
           saveImg.pixels[i] = depthArray[j][i];
         }
         imageMode(CENTER);
